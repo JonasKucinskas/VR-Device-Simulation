@@ -1,14 +1,7 @@
 using System.Collections.Generic;
-using System.Data.Common;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using TMPro;
-using UnityEditor.MemoryProfiler;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.InputSystem.XR.Haptics;
-using static UnityEngine.UI.GridLayoutGroup;
 
 public class EditManager : MonoBehaviour
 {
@@ -98,7 +91,7 @@ public class EditManager : MonoBehaviour
         }
     }
 
-    void updateTasks(GameObject newObject)
+    public void updateTasks(GameObject newObject)
     {
         Device spawnedDevice = newObject.GetComponent<Device>();
 
