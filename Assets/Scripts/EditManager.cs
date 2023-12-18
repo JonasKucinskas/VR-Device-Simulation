@@ -125,6 +125,17 @@ public class EditManager : MonoBehaviour
             selectedCableIndex = -1;
             string prefabPath = AssetDatabase.GetAssetPath(temp);
 
+            //Add to object or connectors list in unity hierarchy
+
+            if (isDevice)
+            {
+                obj.transform.parent = GameObject.Find("Devices").transform;
+            }
+            else
+            {
+                obj.transform.parent = GameObject.Find("Connectors").transform;
+            }
+
             //updateTasks(obj);
             Debug.Log("Prefab path: " + prefabPath);
             obj.name = obj.name.Replace("(Clone)", "");
@@ -270,8 +281,4 @@ public class EditManager : MonoBehaviour
         }
         return null;
     }
-}
-public static class ObjectPrefabPaths
-{
-    public static Dictionary<string, string> paths = new Dictionary<string, string>(); // key - object_name, value - prefab_path
 }
