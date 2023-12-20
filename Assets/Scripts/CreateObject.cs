@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -32,7 +33,27 @@ public class CreateObject : MonoBehaviour
     {
         if (SelectedPrefab != null)
         {
-            obj = Instantiate(SelectedPrefab, controller.transform.position, controller.transform.rotation);
+            GameObject obj = Instantiate(SelectedPrefab, controller.transform.position, controller.transform.rotation);
+            MonoScript targetScript = MonoScript.FromMonoBehaviour(obj.GetComponent<Device>());
+
+            if (targetScript != null)
+            {
+                obj.transform.parent = GameObject.Find("Devices").transform;
+            }
+            else
+            {
+                targetScript = MonoScript.FromMonoBehaviour(obj.GetComponent<Wire>());
+                if (targetScript != null)
+                {
+                    obj.transform.parent = GameObject.Find("Connectors").transform;
+
+                }
+                else
+                {
+                    Debug.Log("Unknown device type");
+                }
+            }
+
             string prefabPath = AssetDatabase.GetAssetPath(SelectedPrefab);
 
             Debug.Log("Prefab path: " + prefabPath);
@@ -94,7 +115,7 @@ public class CreateObject : MonoBehaviour
     }
 }
 
-/*public static class ObjectPrefabPaths
+public static class ObjectPrefabPaths
 {
     public static Dictionary<string, string> paths = new Dictionary<string, string>(); // key - object_name, value - prefab_path
-}*/
+}
