@@ -340,7 +340,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -721,7 +721,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -2151,7 +2151,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -2875,7 +2875,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -3652,7 +3652,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelCanvas
         m_Mode: 1
@@ -3836,6 +3836,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707916487}
   m_CullTransparentMesh: 1
+--- !u!114 &732466953 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8570834673310750084, guid: bf0e6d45493a8e84c904bfcef13fe0ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 5407828009192574755}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b17c4414a6e353419bddf61389b28e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &794223858
 GameObject:
   m_ObjectHideFlags: 0
@@ -3919,7 +3931,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -4217,7 +4229,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -4550,7 +4562,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -4909,7 +4921,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -5042,7 +5054,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -5175,7 +5187,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -6526,7 +6538,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -6576,18 +6588,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474851482}
   m_CullTransparentMesh: 1
---- !u!114 &1531800572 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5407828010648315103, guid: bf0e6d45493a8e84c904bfcef13fe0ad,
-    type: 3}
-  m_PrefabInstance: {fileID: 5407828009192574755}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3004c90ab564f1f4199595af8ba7f03f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1537611157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7418,7 +7418,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: BackToMain
         m_Mode: 1
@@ -7594,7 +7594,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -9134,7 +9134,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1531800572}
+      - m_Target: {fileID: 732466953}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadLevelScene
         m_Mode: 5
@@ -9336,5 +9336,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8570834673310750084, guid: bf0e6d45493a8e84c904bfcef13fe0ad,
+        type: 3}
+      propertyPath: origin
+      value: 
+      objectReference: {fileID: 1884321277}
+    - target: {fileID: 8570834673310750084, guid: bf0e6d45493a8e84c904bfcef13fe0ad,
+        type: 3}
+      propertyPath: playCanvas
+      value: 
+      objectReference: {fileID: 426752076}
+    - target: {fileID: 8570834673310750084, guid: bf0e6d45493a8e84c904bfcef13fe0ad,
+        type: 3}
+      propertyPath: levelCanvas
+      value: 
+      objectReference: {fileID: 1144100018}
+    m_RemovedComponents:
+    - {fileID: 5407828010648315103, guid: bf0e6d45493a8e84c904bfcef13fe0ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bf0e6d45493a8e84c904bfcef13fe0ad, type: 3}

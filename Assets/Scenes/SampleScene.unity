@@ -14539,6 +14539,11 @@ PrefabInstance:
       propertyPath: pausePosition
       value: 
       objectReference: {fileID: 1755485985}
+    - target: {fileID: 8570834673310750084, guid: bf0e6d45493a8e84c904bfcef13fe0ad,
+        type: 3}
+      propertyPath: origin
+      value: 
+      objectReference: {fileID: 223974227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0e6d45493a8e84c904bfcef13fe0ad, type: 3}
 --- !u!4 &1755485985 stripped
