@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEditor;
 using System.Collections;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class EditManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class EditManager : MonoBehaviour
     [SerializeField] private GameObject[] devicePrefabs;
     [SerializeField] private GameObject[] cablePrefabs;
     [SerializeField] private GameObject controller;
+    [SerializeField] private XRRayInteractor rayInteractor;
     private int selectedDeviceIndex = -1;
     private int selectedCableIndex = -1;
     private int objectIndex = 0;
@@ -48,6 +50,7 @@ public class EditManager : MonoBehaviour
     {
         if (placing)
         {
+            RaycastHit res;
             bool triggerValue;
             InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.triggerButton,
                               out triggerValue);
@@ -61,6 +64,7 @@ public class EditManager : MonoBehaviour
                 foreach (var component in components)
                 {
                     component.useGravity = true; // restore gravity for placed obejcts
+                    //component.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
                     if (isDevice)
                         StartCoroutine(SetKinematic(component, 1f));
                 }
@@ -68,7 +72,31 @@ public class EditManager : MonoBehaviour
             }
             else
             {
-                obj.transform.SetPositionAndRotation(controller.transform.position, controller.transform.rotation);
+                if (rayInteractor.TryGetCurrent3DRaycastHit(out res)) // && surface is pointing up
+                {
+                    Vector3 groundPt = res.point; // the coordinate that the ray hits
+                    //obj.transform.SetPositionAndRotation(groundPt, res.transform.rotation);
+                    if (isDevice)
+                    {
+                        obj.GetComponent<Rigidbody>().MovePosition(groundPt);
+                        obj.GetComponent<Rigidbody>().MoveRotation(res.transform.rotation);
+                    }
+                    else
+                    {
+                        foreach (var comp in obj.GetComponentsInChildren<Rigidbody>())
+                        {
+                            comp.MovePosition(groundPt);
+                            comp.MoveRotation(res.transform.rotation);
+                        }
+                            //obj.transform.SetPositionAndRotation(groundPt, res.transform.rotation);
+                    }
+                    //Debug.Log(" coordinates on the ground: " + groundPt);
+                }
+                else
+                {
+
+                }
+
             }
             if (cancelValue)
             {
@@ -153,7 +181,7 @@ public class EditManager : MonoBehaviour
             var components = obj.GetComponentsInChildren<Rigidbody>();
             foreach (var component in components)
             {
-                component.useGravity = false; // disable gravity while placing objects
+                //component.useGravity = false; // disable gravity while placing objects
                 component.isKinematic = false;
             }
         

@@ -301,7 +301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7476642}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 146166612}
   - component: {fileID: 146166611}
   - component: {fileID: 146166610}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1785,7 +1785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 217571638}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2253,7 +2253,7 @@ GameObject:
   - component: {fileID: 302988619}
   - component: {fileID: 302988621}
   - component: {fileID: 302988620}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2374,7 +2374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 350380378}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2532,7 +2532,7 @@ GameObject:
   - component: {fileID: 360976232}
   - component: {fileID: 360976231}
   - component: {fileID: 360976230}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2656,7 +2656,7 @@ GameObject:
   - component: {fileID: 361741948}
   - component: {fileID: 361741950}
   - component: {fileID: 361741949}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2946,7 +2946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 363720240}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3678,7 +3678,7 @@ GameObject:
   - component: {fileID: 446422141}
   - component: {fileID: 446422140}
   - component: {fileID: 446422139}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4684,12 +4684,13 @@ MonoBehaviour:
     type: 3}
   devicePrefabs:
   - {fileID: 4103852475142950840, guid: 930431c4334ceb64791c5d7650bdd9d7, type: 3}
-  - {fileID: 6475051436834013670, guid: f12c8507fe6b8244ca278dfac561312a, type: 3}
+  - {fileID: 969750289481884672, guid: fdc909c7717d95c459c1021ff0667ec5, type: 3}
   - {fileID: 2563413534957710809, guid: 8ead1c9558c4e8e4c87ee2fe00617832, type: 3}
   cablePrefabs:
   - {fileID: 7911004367817538595, guid: 8182fa7f206b3bc4583d95cd274aea0c, type: 3}
   - {fileID: 4307824869056325160, guid: 1f91b2882425b8c42ac017c616cae672, type: 3}
   controller: {fileID: 812158570}
+  rayInteractor: {fileID: 1608199744}
 --- !u!4 &539547078
 Transform:
   m_ObjectHideFlags: 0
@@ -4713,7 +4714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 557332680}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5040,7 +5041,7 @@ GameObject:
   - component: {fileID: 599498519}
   - component: {fileID: 599498521}
   - component: {fileID: 599498520}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6090,7 +6091,7 @@ GameObject:
   - component: {fileID: 830356184}
   - component: {fileID: 830356186}
   - component: {fileID: 830356185}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6609,7 +6610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 906005058}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6882,7 +6883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 962557464}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7803,7 +7804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1207409701}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7833,7 +7834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1220491064}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7865,7 +7866,7 @@ GameObject:
   - component: {fileID: 1222428236}
   - component: {fileID: 1222428238}
   - component: {fileID: 1222428237}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8112,7 +8113,7 @@ GameObject:
   - component: {fileID: 1236040080}
   - component: {fileID: 1236040079}
   - component: {fileID: 1236040078}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8370,7 +8371,7 @@ GameObject:
   - component: {fileID: 1250627215}
   - component: {fileID: 1250627214}
   - component: {fileID: 1250627213}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11176,7 +11177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1549892678}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11208,7 +11209,7 @@ GameObject:
   - component: {fileID: 1551001804}
   - component: {fileID: 1551001805}
   - component: {fileID: 1551001806}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11329,7 +11330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1554419621}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11427,6 +11428,11 @@ PrefabInstance:
       propertyPath: pausePosition
       value: 
       objectReference: {fileID: 1566800964}
+    - target: {fileID: 8570834673310750084, guid: bf0e6d45493a8e84c904bfcef13fe0ad,
+        type: 3}
+      propertyPath: origin
+      value: 
+      objectReference: {fileID: 223974227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0e6d45493a8e84c904bfcef13fe0ad, type: 3}
 --- !u!4 &1566800964 stripped
@@ -11616,7 +11622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587179079}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11646,7 +11652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1597961114}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12069,7 +12075,7 @@ MonoBehaviour:
   m_SphereCastRadius: 0.1
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 96
+    m_Bits: 552
   m_RaycastTriggerInteraction: 1
   m_HitClosestOnly: 0
   m_HoverToSelect: 0
@@ -12406,7 +12412,7 @@ GameObject:
   - component: {fileID: 1647080872}
   - component: {fileID: 1647080871}
   - component: {fileID: 1647080870}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12840,7 +12846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1710119734}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12925,7 +12931,7 @@ GameObject:
   - component: {fileID: 1721321674}
   - component: {fileID: 1721321673}
   - component: {fileID: 1721321672}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13233,7 +13239,7 @@ GameObject:
   - component: {fileID: 1743945887}
   - component: {fileID: 1743945889}
   - component: {fileID: 1743945888}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13646,7 +13652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1847849089}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14264,7 +14270,7 @@ GameObject:
   - component: {fileID: 1971544004}
   - component: {fileID: 1971544006}
   - component: {fileID: 1971544005}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14809,7 +14815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2108610606}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15053,7 +15059,7 @@ GameObject:
   - component: {fileID: 2140019374}
   - component: {fileID: 2140019373}
   - component: {fileID: 2140019372}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15493,7 +15499,7 @@ GameObject:
   - component: {fileID: 1123675634}
   - component: {fileID: 92081407}
   - component: {fileID: 92081408}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15600,7 +15606,7 @@ GameObject:
   - component: {fileID: 335207825252208039}
   - component: {fileID: 2540613980515613037}
   - component: {fileID: 806924847}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mousepad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16020,7 +16026,7 @@ GameObject:
   - component: {fileID: 7037144264992191441}
   - component: {fileID: 5065426040400742171}
   - component: {fileID: 1123675637}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
