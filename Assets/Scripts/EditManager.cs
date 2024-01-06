@@ -38,8 +38,9 @@ public class EditManager : MonoBehaviour
         possibleConnections.Add("IN", "OUT");
         possibleConnections.Add("USB", "USB");
         possibleConnections.Add("3.5 mm Audio", "3.5 mm Audio");
-
-
+        // Initial drop-down selections
+        SelectDevice(0);
+        SelectCable(0);
         requirementData = new RequirementData();
         requirementData.requiredConnections = new List<ConnectionRequirement>();
         //fillDeviceDropDown();    
@@ -149,8 +150,7 @@ public class EditManager : MonoBehaviour
             this.isDevice = isDevice;
             GameObject temp = isDevice ? SelectedDevice : SelectedCable;
             obj = Instantiate(temp, controller.transform.position, controller.transform.rotation);
-            selectedDeviceIndex = -1; // reset values
-            selectedCableIndex = -1;
+
             string prefabPath = AssetDatabase.GetAssetPath(temp);
 
             //Add to object or connectors list in unity hierarchy
