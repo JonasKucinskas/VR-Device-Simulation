@@ -21,7 +21,6 @@ public class EditManager : MonoBehaviour
     [SerializeField] private XRRayInteractor rayInteractor;
     private int selectedDeviceIndex = -1;
     private int selectedCableIndex = -1;
-    private int objectIndex = 0;
     private bool placing = false;
     private bool isDevice = false;
     private GameObject obj; // the obj that is created
@@ -44,7 +43,6 @@ public class EditManager : MonoBehaviour
         requirementData = new RequirementData();
         requirementData.requiredConnections = new List<ConnectionRequirement>();
         //fillDeviceDropDown();
-        objectIndex = Random.Range(0, 1000); // fix later
     }
 
     // Update is called once per frame
@@ -170,17 +168,8 @@ public class EditManager : MonoBehaviour
 
             //updateTasks(obj);
             Debug.Log("Prefab path: " + prefabPath);
-            obj.name = obj.name.Replace("(Clone)", "");
-            if (ObjectPrefabPaths.paths.ContainsKey(obj.name))
-            {
-                obj.name = obj.name + objectIndex;
-                objectIndex++;
-                ObjectPrefabPaths.paths.Add(obj.name, prefabPath);
-            }
-            else
-            {
-                ObjectPrefabPaths.paths.Add(obj.name, prefabPath);
-            }
+            obj.name = obj.name.Replace("(Clone)", "") + obj.GetInstanceID();
+            ObjectPrefabPaths.paths.Add(obj.name, prefabPath);
             placing = true;
             var components = obj.GetComponentsInChildren<Rigidbody>();
         }
