@@ -43,7 +43,8 @@ public class EditManager : MonoBehaviour
         SelectCable(0);
         requirementData = new RequirementData();
         requirementData.requiredConnections = new List<ConnectionRequirement>();
-        //fillDeviceDropDown();    
+        //fillDeviceDropDown();
+        objectIndex = Random.Range(0, 1000); // fix later
     }
 
     // Update is called once per frame
@@ -58,6 +59,9 @@ public class EditManager : MonoBehaviour
             bool cancelValue;
             InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(CommonUsages.triggerButton,
                   out cancelValue);
+            Vector2 rotationValue;
+            InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.primary2DAxis,
+                out rotationValue);
             if (triggerValue)
             {
                 placing = false;
@@ -66,8 +70,6 @@ public class EditManager : MonoBehaviour
                 {
                     component.useGravity = true; // restore gravity for placed obejcts
                     //component.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
-                    if (isDevice)
-                        StartCoroutine(SetKinematic(component, 1f));
                 }
                 updateTasks(obj);
             }
@@ -76,20 +78,27 @@ public class EditManager : MonoBehaviour
                 if (rayInteractor.TryGetCurrent3DRaycastHit(out res)) // && surface is pointing up
                 {
                     Vector3 groundPt = res.point; // the coordinate that the ray hits
-                    //obj.transform.SetPositionAndRotation(groundPt, res.transform.rotation);
                     if (isDevice)
                     {
-                        obj.GetComponent<Rigidbody>().MovePosition(groundPt);
-                        obj.GetComponent<Rigidbody>().MoveRotation(res.transform.rotation);
+                        Rigidbody rb = obj.GetComponent<Rigidbody>();
+                        rb.MovePosition(groundPt);
+                        //obj.GetComponent<Rigidbody>().MoveRotation(res.transform.rotation);
+                        if (rotationValue != Vector2.zero)
+                        {
+                            rb.rotation *= Quaternion.AngleAxis(rotationValue.y * 10, new Vector3(0, rotationValue.y, 0));
+                        }
                     }
                     else
                     {
+                        // is a cable
                         foreach (var comp in obj.GetComponentsInChildren<Rigidbody>())
                         {
                             comp.MovePosition(groundPt);
-                            comp.MoveRotation(res.transform.rotation);
+                            if (rotationValue != Vector2.zero)
+                            {
+                                comp.rotation *= Quaternion.AngleAxis(rotationValue.y * 10, new Vector3(0, rotationValue.y, 0));
+                            }
                         }
-                            //obj.transform.SetPositionAndRotation(groundPt, res.transform.rotation);
                     }
                     //Debug.Log(" coordinates on the ground: " + groundPt);
                 }
@@ -104,11 +113,6 @@ public class EditManager : MonoBehaviour
                 placing = false;
                 Destroy(obj);
             }
-        }
-        IEnumerator SetKinematic(Rigidbody rb, float delayTime)
-        {
-            yield return new WaitForSeconds(delayTime);
-            rb.isKinematic = true;
         }
     }
 
@@ -149,7 +153,7 @@ public class EditManager : MonoBehaviour
         {
             this.isDevice = isDevice;
             GameObject temp = isDevice ? SelectedDevice : SelectedCable;
-            obj = Instantiate(temp, controller.transform.position, controller.transform.rotation);
+            obj = Instantiate(temp, controller.transform.position, new Quaternion(0, 0, 0, 0));
 
             string prefabPath = AssetDatabase.GetAssetPath(temp);
 
@@ -179,13 +183,6 @@ public class EditManager : MonoBehaviour
             }
             placing = true;
             var components = obj.GetComponentsInChildren<Rigidbody>();
-            foreach (var component in components)
-            {
-                //component.useGravity = false; // disable gravity while placing objects
-                component.isKinematic = false;
-            }
-        
-            //oldColor = obj.GetComponent<Renderer>().material.
         }
     }
     public void SelectDevice(int index)
